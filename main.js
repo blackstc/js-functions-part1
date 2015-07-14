@@ -24,12 +24,13 @@ function discountPercentage(amount, discount) {
 
 console.log(discountPercentage(200, 40));
 
+
 function stringCapitalize(string) {
   var words = string.split(" ");
   for (var i = 0; i < words.length; i++) {
     var firstLetter = words[i].charAt(0);
-    var rest = words[i].substr(1, words[-1])
-    words[i] = firstLetter.toUpperCase() + rest
+    var rest = words[i].slice(1);
+    words[i] = firstLetter.toUpperCase() + rest;
   };
   return words.join(" ");
 }
